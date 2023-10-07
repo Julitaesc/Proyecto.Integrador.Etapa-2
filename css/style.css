@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@100;400&family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+background-color: #1b1a1b;
+}
+
+
+/*NAVBAR*/
+.fa-lg {
+    color: #5B8FB9; 
+}
+
+.nav-link:hover,
+.nav-link.active:hover,
+.fa-lg:hover,
+.navbar-brand:hover {
+    color: #75d7f0; 
+}
+
+/* ?Logo */
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.logo-animation {
+    animation: scale 5s ease-in-out infinite; 
+}
+
+/* Idiomas */
+.btn.dropdown-toggle {
+    background-color: transparent; 
+    color: #5B8FB9; 
+    border: 1px solid #5B8FB9; 
+}
+
+.dropdown-divider {
+    border-color: #5B8FB9;
+}
+
+.bandera-img,
+.moneda-img 
+{
+    width: 20px; 
+    margin-right: 5px; 
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Barra de búsqueda */
+
+.custom-search-button {
+    background-color: #1b1a1b; /* Cambia esto al color de fondo deseado */
+    border: 1px solid #5B8FB9; /* Cambia esto al color del borde deseado */
+    color: #5B8FB9; /* Cambia esto al color del texto deseado */
+}
+
+.custom-search-form {
+    background-color: #1b1a1b; /* Cambia esto al color de fondo deseado */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 5px; /* Ajusta el radio del borde según sea necesario */
+}
+
+.custom-search-form input {
+    background-color: #1b1a1b; /* Cambia esto al color de fondo del campo de entrada */
+    color: #f7f4f4; /* Cambia esto al color del texto del campo de entrada */
+    border: 1px solid #5B8FB9; /* Cambia esto al color del borde del campo de entrada */
+    border-radius: 5px; /* Ajusta el radio del borde según sea necesario */
+    padding: 5px; /* Ajusta el relleno del campo de entrada según sea necesario */
+}
+
+input:focus {
+    color: #f7f4f4; /* Cambia el color del texto cuando el input está enfocado */
+    background-color: #1b1a1b; /* Cambia el color de fondo cuando el input está enfocado */
+}
+
+/* User */
+
+.btn-primary {
+    background-color: #5B8FB9;
+    border-color: #5B8FB9;
+}
+
+.btn-secondary {
+    background-color: #5B8FB9;
+    border-color: #5B8FB9;
+    color: #fff; 
+}
+
+.modal-content {
+    background-color: #1b1a1b;
+    color: #fff;
+}
+.modal-content input {
+    background-color: #1b1a1b; /* Fondo del input */
+    border-color: #5B8FB9; /* Borde del input */
+    color: #fff; /* Color del texto del input */
+}
+/* Estilo para los placeholders de los campos de entrada */
+.form-control::placeholder {
+    color: #ccc; /* Color del marcador de posición */
+}
+
+.close {
+    color: #5B8FB9; /* Color del texto de la cruz */
+}
+
+.registroForm button[type="submit"] {
+    background-color: #5B8FB9;
+    border-color: #5B8FB9;
+    color: #fff; /* Color del texto del botón de "Registrarse" */
+    width: 100%; 
+}
+/*Productos*/
+.price-highlight {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente para destacar */
+    font-weight: bold; /* Texto en negrita */ 
+}
+
+/*Iconos*/
+.footer-social img.social-icon {
+    width: 30px; /* Ajusta este valor según tus preferencias */
+    height: 30px; /* Ajusta este valor según tus preferencias */
+    margin-right: 10px;
+}
+.custom-icon, 
+.btn-custom,
+.fa-cart-shopping { 
+    color: #5B8FB9;
+    
+}
+.nosotros-iconos {
+    margin: 2em 0 0 2em;
+    text-align: center;
+}
+
+.nosotros-iconos ul {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los íconos */
+    gap: 20px;
+}
+
+.fa-facebook:hover {
+color:#3b5998;
+transition: all .4s;
+}
+
+.fa-whatsapp:hover {
+color:#075E54;
+transition: all .4s;
+}
+
+.fa-instagram:hover {
+color:#833AB4;
+transition: all .4s;
+}
+.fa-envelope:hover {
+color:#d93025;
+transition: all .4s;
+}
+/* Botón COMPRAR*/
+
+.btn-resaltar {
+    background-color: #638b94 ; 
+    border-color: #638b94; 
+    color: #000; 
+    font-family: Roboto, bold, sans-serif;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+}
+
+  .btn-resaltar:hover { /*Reacción al pasar el mouse */
+    background-color: #7dc2c3; 
+    border-color: #7dc2c3; 
+    color: #000; 
+}
+
+/*Pagina Carrito */
+
+.tarjetas img {
+    width: 30px;
+}
+
+.btn-custom {
+    background-color: white; /* Cambiar el fondo a negro */
+    border-color: black;
+}
