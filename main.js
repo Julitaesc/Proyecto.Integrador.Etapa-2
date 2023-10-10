@@ -1,18 +1,38 @@
 /* Librerias */
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 /* Archivos de proyecto*/
 import './css/style.css'
 
 /* Modo claro/oscuro */
-const modoToggle = document.getElementById('modo-toggle');
-const body = document.body;
+const modoSwitch = document.getElementById('modoSwitch');
+const body = document.querySelector('body');
 
-modoToggle.addEventListener('change', () => {
-    body.classList.toggle('light-mode');
-    body.classList.toggle('dark-mode');
+// Obtener el modo guardado del almacenamiento local
+const modoGuardado = localStorage.getItem('modo');
+
+// Establecer el modo predeterminado si no se encuentra en el almacenamiento local
+const modoPredeterminado = modoGuardado || 'claro';
+
+// Aplicar el modo guardado o predeterminado al cuerpo de la página y al interruptor
+body.setAttribute('data-bs-theme', modoPredeterminado);
+modoSwitch.checked = modoPredeterminado === 'oscuro';
+
+modoSwitch.addEventListener('change', () => {
+    if (modoSwitch.checked) {
+        // Modo oscuro
+        body.setAttribute('data-bs-theme', 'dark');
+        localStorage.setItem('modo', 'oscuro');
+    } else {
+        // Modo claro
+        body.setAttribute('data-bs-theme', 'light');
+        localStorage.setItem('modo', 'claro');
+    }
 });
+
+
 /* User */
 
 document.getElementById("registroForm").addEventListener("submit", function(event) {

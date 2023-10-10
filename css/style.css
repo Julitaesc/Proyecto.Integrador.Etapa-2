@@ -1,14 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@100;400&family=Roboto:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
+body[data-bs-theme="dark"] {
 background-color: #1b1a1b;
 }
 
+body[data-bs-theme="light"] {
+    /* Agrega tus estilos para el modo claro aquí */
+    background-color: rgb(247, 247, 247);
+    color: black;
+    /* ... otras reglas de estilo ... */
+}
 
 /*NAVBAR*/
 .fa-lg {
@@ -85,41 +92,69 @@ input:focus {
     color: #f7f4f4; /* Cambia el color del texto cuando el input está enfocado */
     background-color: #1b1a1b; /* Cambia el color de fondo cuando el input está enfocado */
 }
-/* Modo claro/oscuro */
-/* Personalizar el interruptor */
-#modo-toggle {
-    display: none; /* Ocultar el input checkbox original */
+body[data-bs-theme="light"] .custom-search-button {
+    background-color: rgb(247, 247, 247); /* Color de fondo del botón de búsqueda en modo claro */
+    border: 1px solid #5B8FB9; /* Color del borde del botón de búsqueda en modo claro */
+    color: #5B8FB9; /* Color del texto del botón de búsqueda en modo claro */
+    /* Agrega otras reglas de estilo para el botón de búsqueda en modo claro */
 }
 
-/* Estilos para el interruptor personalizado */
-#modo-toggle + .toggle-group {
+body[data-bs-theme="light"] .custom-search-form {
+    background-color: rgb(247, 247, 247); /* Color de fondo del formulario de búsqueda en modo claro */
+     /* Color del borde del formulario de búsqueda en modo claro */
+    /* Agrega otras reglas de estilo para el formulario de búsqueda en modo claro */
+}
+
+body[data-bs-theme="light"] .custom-search-form input {
+    background-color: rgb(247, 247, 247); /* Color de fondo del campo de entrada de búsqueda en modo claro */
+    color: #fff; /* Color del texto del campo de entrada de búsqueda en modo claro */
+    border: 1px solid #5B8FB9; /* Color del borde del campo de entrada de búsqueda en modo claro */
+    /* Agrega otras reglas de estilo para el campo de entrada de búsqueda en modo claro */
+}
+
+/* Modo claro/oscuro */
+
+.custom-switch .custom-control-input {
+    display: none;
+}
+
+.custom-switch .switch-bar {
+    background-color: #ddd;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    position: relative;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-between;
+    padding: 5px; /* Espacio interior entre los íconos y el switch bar */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el switch */
+    transition: background-color 0.3s;
 }
 
-#modo-toggle + .toggle-group .toggle-handle {
-    width: 40px; /* Ancho del interruptor */
-    height: 20px; /* Altura del interruptor */
-    border-radius: 10px; /* Hacer el interruptor redondeado */
-    background-color: #ccc; /* Color de fondo del interruptor cuando está apagado */
-    position: relative;
-    margin-right: 10px;
-}
-
-#modo-toggle:checked + .toggle-group .toggle-handle {
-    background-color: #ffc107; /* Color de fondo del interruptor cuando está encendido */
-}
-
-#modo-toggle:checked + .toggle-group .toggle-handle::before {
-    content: 'ON'; /* Texto "ON" cuando el interruptor está encendido */
-    color: #fff; /* Color del texto "ON" */
+.custom-switch .switch-thumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    transition: left 0.3s;
 }
+
+.custom-switch .switch-icon {
+    font-size: 1.2rem;
+}
+
+.custom-switch .custom-control-input:checked + .custom-control-label .switch-bar {
+    background-color: #5B8FB9;
+}
+
+.custom-switch .custom-control-input:checked + .custom-control-label .switch-thumb {
+    left: 30px;
+}
+
 /* User */
+
 
 .close-btn {
     background: url('/img/close.png') no-repeat center center;
@@ -154,6 +189,15 @@ input:focus {
 /* Estilo para los placeholders de los campos de entrada */
 .form-control::placeholder {
     color: #ccc; /* Color del marcador de posición */
+}
+
+/* Carrousel */
+
+body[data-bs-theme="dark"] .carousel-indicators {
+    display: none;
+}
+body[data-bs-theme="light"] .carousel-indicators {
+    display: none;
 }
 
 /*Productos*/

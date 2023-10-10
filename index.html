@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body data-bs-theme="dark">
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-custom fw-bold">
@@ -89,7 +89,26 @@
         </div>
         
         <!-- Modo claro/oscuro -->
-        <input type="checkbox" id="modo-toggle" data-toggle="toggle">
+        <div class="custom-switch">
+          <input type="checkbox" class="custom-control-input" id="modoSwitch">
+          <label class="custom-control-label" for="modoSwitch">
+              <div class="switch-bar">
+                  <i class="bi bi-moon text-dark switch-icon"></i>
+                  <div class="switch-thumb"></div>
+                  <i class="bi bi-sun-fill text-dark switch-icon"></i>
+              </div>
+          </label>
+      </div>
+      
+
+
+          <!--? User -->
+          <div class="navbar-nav">
+            <a href="#" class="text-reset me-3 user-icon" data-bs-toggle="modal" data-bs-target="#registroModal">
+                <i class="fas fa-user fa-lg"></i>
+            </a>
+        </div>
+        
     
         <!-- Modal de registro de cuenta -->
         <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
