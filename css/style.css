@@ -85,12 +85,55 @@ input:focus {
     color: #f7f4f4; /* Cambia el color del texto cuando el input está enfocado */
     background-color: #1b1a1b; /* Cambia el color de fondo cuando el input está enfocado */
 }
+/* Modo claro/oscuro */
+/* Personalizar el interruptor */
+#modo-toggle {
+    display: none; /* Ocultar el input checkbox original */
+}
 
+/* Estilos para el interruptor personalizado */
+#modo-toggle + .toggle-group {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#modo-toggle + .toggle-group .toggle-handle {
+    width: 40px; /* Ancho del interruptor */
+    height: 20px; /* Altura del interruptor */
+    border-radius: 10px; /* Hacer el interruptor redondeado */
+    background-color: #ccc; /* Color de fondo del interruptor cuando está apagado */
+    position: relative;
+    margin-right: 10px;
+}
+
+#modo-toggle:checked + .toggle-group .toggle-handle {
+    background-color: #ffc107; /* Color de fondo del interruptor cuando está encendido */
+}
+
+#modo-toggle:checked + .toggle-group .toggle-handle::before {
+    content: 'ON'; /* Texto "ON" cuando el interruptor está encendido */
+    color: #fff; /* Color del texto "ON" */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 /* User */
 
+.close-btn {
+    background: url('/img/close.png') no-repeat center center;
+    background-size: contain;
+    width: 30px; /* Ajusta el ancho según tus necesidades */
+    height: 30px; /* Ajusta el alto según tus necesidades */
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
 .btn-primary {
     background-color: #5B8FB9;
     border-color: #5B8FB9;
+    color: #fff; 
 }
 
 .btn-secondary {
@@ -113,16 +156,6 @@ input:focus {
     color: #ccc; /* Color del marcador de posición */
 }
 
-.close {
-    color: #5B8FB9; /* Color del texto de la cruz */
-}
-
-.registroForm button[type="submit"] {
-    background-color: #5B8FB9;
-    border-color: #5B8FB9;
-    color: #fff; /* Color del texto del botón de "Registrarse" */
-    width: 100%; 
-}
 /*Productos*/
 .price-highlight {
     font-size: 1.5rem; /* Ajusta el tamaño de la fuente para destacar */
