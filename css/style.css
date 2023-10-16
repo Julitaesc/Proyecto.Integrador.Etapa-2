@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@100;400&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;400&family=Lato&family=Montserrat&family=Roboto:wght@400;700&display=swap');
 
 * {
     margin: 0;
@@ -6,8 +6,9 @@
     box-sizing: border-box;
 }
 
-body[data-bs-theme="dark"] {
+body {
 background-color: #1b1a1b;
+font-family: 'Lato', sans-serif;
 }
 
 body[data-bs-theme="light"] {
@@ -25,7 +26,8 @@ body[data-bs-theme="light"] {
 .nav-link:hover,
 .nav-link.active:hover,
 .fa-lg:hover,
-.navbar-brand:hover {
+.navbar-brand:hover,
+.fa-cart-shopping:hover {
     color: #75d7f0; 
 }
 
@@ -201,59 +203,48 @@ body[data-bs-theme="light"] .carousel-indicators {
 }
 
 /*Productos*/
+.card-body {
+margin-top: 20px;
+
+}
+
 .price-highlight {
-    font-size: 1.5rem; /* Ajusta el tamaño de la fuente para destacar */
-    font-weight: bold; /* Texto en negrita */ 
-}
-
-/*Iconos*/
-.footer-social img.social-icon {
-    width: 30px; /* Ajusta este valor según tus preferencias */
-    height: 30px; /* Ajusta este valor según tus preferencias */
-    margin-right: 10px;
-}
-.custom-icon, 
-.btn-custom,
-.fa-cart-shopping { 
-    color: #5B8FB9;
-    
-}
-.nosotros-iconos {
-    margin: 2em 0 0 2em;
-    text-align: center;
-}
-
-.nosotros-iconos ul {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    margin-top: 15px;
     display: flex;
-    justify-content: center; /* Centra horizontalmente los íconos */
-    gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
-.fa-facebook:hover {
-color:#3b5998;
-transition: all .4s;
+/* Estilos específicos para el modo oscuro */
+body[data-bs-theme="dark"] .bg-neutral {
+    background-color: #212529; 
+    color: #ecf0f1; 
 }
 
-.fa-whatsapp:hover {
-color:#075E54;
-transition: all .4s;
+.btn-resaltar {
+    font-weight: bold; 
+    background-color: #638b94; 
+    border-color: #638b94; 
+    color: #000; 
+    font-family: Lato, sans-serif;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
 }
 
-.fa-instagram:hover {
-color:#833AB4;
-transition: all .4s;
+.card-title {
+font-family: 'Lato', sans-serif;
+font-weight: bold;
 }
-.fa-envelope:hover {
-color:#d93025;
-transition: all .4s;
-}
+
 /* Botón COMPRAR*/
 
 .btn-resaltar {
     background-color: #638b94 ; 
     border-color: #638b94; 
     color: #000; 
-    font-family: Roboto, bold, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
 }
 
@@ -265,11 +256,147 @@ transition: all .4s;
 
 /*Pagina Carrito */
 
+.fa-cart-shopping {
+color: #5B8FB9;
+}
+
 .tarjetas img {
     width: 30px;
 }
 
 .btn-custom {
-    background-color: white; /* Cambiar el fondo a negro */
+    background-color: white; 
     border-color: black;
 }
+
+
+/*Iconos y Footer*/
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-top: 2px solid #000;
+    background-color: #212529;
+}
+
+body[data-bs-theme="light"] .footer-container {
+background-color: white;
+}
+
+.nav-link {
+color: white;
+}
+
+.footer-logo {
+    margin-right: 20px;
+}
+
+.redes-sociales ul {
+    list-style: none;
+    display: flex;
+    margin-left: 0px;
+    align-items: center;
+}
+
+.redes-sociales ul li {
+    margin-right: 20px;
+}
+
+.redes-texto {
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+}
+.social-icon {
+    font-size: 25px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    padding: 15px;
+    transition: background-color 0.5s ease;
+    color: white;
+    }
+
+.social-icon:hover {
+    background-color: #7dc2c3;
+}
+
+.footer-info {
+    font-weight: bold;
+    margin-left: auto;
+    text-align: right;
+    margin-right: 10px;
+}
+
+body[data-bs-theme="light"] .footer-container {
+    background-color: #f7f7f7; /* Cambia el color de fondo del pie de página en modo claro */
+    border-top-color: #ddd; /* Cambia el color de la línea superior en modo claro */
+}
+
+body[data-bs-theme="light"] .redes-texto,
+body[data-bs-theme="light"] .social-icon,
+body[data-bs-theme="light"] .nav-item,
+body[data-bs-theme="light"] .footer-info {
+    color: #333; 
+
+}
+
+body[data-bs-theme="light"] .social-icon {
+    border-color: #333; 
+}
+
+body[data-bs-theme="light"] .social-icon:hover {
+    background-color: #7dc2c3; 
+}
+
+body[data-bs-theme="light"] .nav-link {
+    color: #333; 
+}
+
+body[data-bs-theme="light"] .nav-link:hover {
+    color: #7dc2c3; /* Cambia el color del texto al pasar el mouse en modo claro */
+}
+
+/* ?Pagina Nosotros */
+/* Estilos para modo oscuro */
+body[data-bs-theme="dark"] .nosotros {
+    background-color: var(--color-oscuro);
+    color: white;
+}
+
+body[data-bs-theme="dark"] .titulo-destacado .text-info,
+body[data-bs-theme="dark"] .text-info {
+    color: var(--color-destacado);
+}
+
+/* Estilos para modo claro */
+/* Estilos para modo claro */
+body[data-bs-theme="light"] .nosotros {
+    background-color: var(--color-claro);
+    color: black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del contenido */
+}
+
+body[data-bs-theme="light"] .titulo-destacado .text-info,
+body[data-bs-theme="light"] .text-info {
+    color: var(--color-destacado);
+}
+
+:root {
+    --color-oscuro: #222; /* Color de fondo para modo oscuro */
+    --color-claro: #fcfcfc; /* Color de fondo para modo claro */
+    --color-destacado: #5B8FB9; /* Color de marca */
+}
+
+
+
+

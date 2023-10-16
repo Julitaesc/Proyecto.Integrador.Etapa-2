@@ -10,7 +10,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
 
-  <body data-bs-theme="dark">
+  <body data-bs-theme="dark" class="modo-claro">
 
     <header>
       <nav class="navbar navbar-expand-lg navbar-custom fw-bold">
@@ -90,10 +90,10 @@
         
         <!-- Modo claro/oscuro -->
         <div class="custom-switch">
-          <input type="checkbox" class="custom-control-input" id="modoSwitch">
+          <input type="checkbox" class="custom-control-input" id="modoSwitch" checked>
           <label class="custom-control-label" for="modoSwitch">
               <div class="switch-bar">
-                  <i class="bi bi-moon text-dark switch-icon"></i>
+                  <i class="bi bi-moon-fill text-dark switch-icon"></i>
                   <div class="switch-thumb"></div>
                   <i class="bi bi-sun-fill text-dark switch-icon"></i>
               </div>
@@ -203,7 +203,7 @@
 <!-- !PRODUCTOS -->
       <!--Producto 1--> 
       <div class="col-md-4">   
-      <div class="card m-2 shadow bg-dark text-light">
+      <div class="card m-2 shadow bg-neutral text-neutral">
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -240,7 +240,7 @@
         <!--Producto 2-->
 
         <div class="col-md-4">   
-          <div class="card m-2 shadow bg-dark text-light">
+          <div class="card m-2 shadow bg-neutral text-neutral">
             <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -275,7 +275,7 @@
               <!--Producto 3-->
 
               <div class="col-md-4">   
-                <div class="card m-2 shadow bg-dark text-light">
+                <div class="card m-2 shadow bg-neutral text-neutral">
                   <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                       <div class="carousel-item active">
@@ -311,7 +311,7 @@
                     <!--Producto 4-->
                     
   <div class="col-md-4">   
-  <div class="card m-2 shadow bg-dark text-light">
+  <div class="card m-2 shadow bg-neutral text-neutral">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -346,7 +346,7 @@
 
       <!--Producto 5-->
       <div class="col-md-4">   
-        <div class="card m-2 shadow bg-dark text-light">
+        <div class="card m-2 shadow bg-neutral text-neutral">
           <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -381,7 +381,7 @@
 
             <!--Producto 6-->
 <div class="col-md-4">   
-  <div class="card m-2 shadow bg-dark text-light">
+  <div class="card m-2 shadow bg-neutral text-neutral">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
@@ -418,26 +418,36 @@
           
       </main>
 
-    <footer class="container-fluid">
-      <div class="footer-container">
-        <div class="footer-logo">
-        </div>
-          <li class="nav-item">
-                <a class="nav-link" href="/pages/nosotros.html">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacto.html">Contacto</a>
-              </li>
+      <footer class="container-fluid bg-neutral text-white">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/img/logo.png" alt="Digitalers Logo">
+            </div>
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contacto.html">Contacto</a>
+                </li>
             </ul>
-        <div class="footer-info text-white">
-            <p>Córdoba, Argentina</p>
-            <p>Todos los derechos reservados &copy; 2023</p>
+            <div class="redes-sociales">
+                <p class="redes-texto">Buscanos en nuestras redes:</p>
+                <ul>
+                    <li><a href="https://www.facebook.com" class="social-link"><i class="fab fa-facebook social-icon"></i></a></li>
+                    <li><a href="https://www.instagram.com" class="social-link"><i class="fab fa-instagram social-icon"></i></a></li>
+                    <li><a href="https://www.twitter.com" class="social-link"><i class="fab fa-twitter social-icon"></i></a></li>
+                    <li><a href="https://www.whatsapp.com" class="social-link"><i class="fab fa-whatsapp social-icon"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>Córdoba, Argentina</p>
+                <p>Todos los derechos reservados &copy; 2023</p>
+            </div>
         </div>
-        <div class="footer-social">
-          <a href="www.facebook.com"><img class="social-icon" src="img/Facebook.svg" alt="Facebook"></a>
-          <a href="www.instagram.com"><img class="social-icon" src="img/Instagram.svg" alt="Instagram"></a>
-      </div>
     </footer>
+    
+    
     <script type="module" src="/main.js"></script>
   </body>
 </html>
