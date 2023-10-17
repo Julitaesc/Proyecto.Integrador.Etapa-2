@@ -14,23 +14,31 @@ const body = document.querySelector('body');
 const modoGuardado = localStorage.getItem('modo');
 
 // Establecer el modo predeterminado si no se encuentra en el almacenamiento local
-const modoPredeterminado = modoGuardado || 'claro';
+const modoPredeterminado = modoGuardado || 'oscuro';
+
+// Función para aplicar los estilos del modo actual
+function aplicarEstilos(modo) {
+    if (modo === 'oscuro') {
+        body.setAttribute('data-bs-theme', 'dark');
+    } else {
+        body.setAttribute('data-bs-theme', 'light');
+    }
+}
 
 // Aplicar el modo guardado o predeterminado al cuerpo de la página y al interruptor
-body.setAttribute('data-bs-theme', modoPredeterminado);
+aplicarEstilos(modoPredeterminado);
 modoSwitch.checked = modoPredeterminado === 'oscuro';
 
+// Manejar el cambio de modo
 modoSwitch.addEventListener('change', () => {
-    if (modoSwitch.checked) {
-        // Modo oscuro
-        body.setAttribute('data-bs-theme', 'dark');
-        localStorage.setItem('modo', 'oscuro');
-    } else {
-        // Modo claro
-        body.setAttribute('data-bs-theme', 'light');
-        localStorage.setItem('modo', 'claro');
-    }
+    const modoSeleccionado = modoSwitch.checked ? 'oscuro' : 'claro';
+    aplicarEstilos(modoSeleccionado);
+    localStorage.setItem('modo', modoSeleccionado);
 });
+
+// Disparar el evento change al cargar la página para aplicar los estilos
+modoSwitch.dispatchEvent(new Event('change'));
+
 
 
 /* User */
