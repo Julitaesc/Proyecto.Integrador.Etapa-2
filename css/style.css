@@ -157,41 +157,61 @@ body[data-bs-theme="light"] .custom-search-form input {
 
 /* User */
 
+/* Estilos para el modal en modo oscuro */
+body[data-bs-theme="dark"] .modal-content {
+    background-color: #1b1a1b;
+    color: #fff;
+}
 
-.close-btn {
-    background: url('/img/close.png') no-repeat center center;
+body[data-bs-theme="dark"] .modal-content input {
+    background-color: #1b1a1b;
+    border-color: #5B8FB9;
+    color: #fff;
+}
+
+body[data-bs-theme="dark"] .close-btn {
+    background: url('/img/close-dark.png') no-repeat center center;
     background-size: contain;
-    width: 30px; /* Ajusta el ancho según tus necesidades */
-    height: 30px; /* Ajusta el alto según tus necesidades */
+    width: 20px;
+    height: 20px;
     border: none;
     cursor: pointer;
     margin-left: auto;
 }
-.btn-primary {
+
+/* Estilos para el modal en modo claro */
+body[data-bs-theme="light"] .modal-content {
+    background-color: #fff;
+    color: #000;
+}
+
+body[data-bs-theme="light"] .modal-content input {
+    background-color: #fff;
+    border-color: #5B8FB9;
+    color: #000;
+}
+
+body[data-bs-theme="light"] .close-btn {
+    background: url('/img/close-dark.png') no-repeat center center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+
+
+/* Botones */
+body[data-bs-theme="light"] .btn-primary,
+body[data-bs-theme="light"] .btn-secondary {
     background-color: #5B8FB9;
     border-color: #5B8FB9;
     color: #fff; 
 }
 
-.btn-secondary {
-    background-color: #5B8FB9;
-    border-color: #5B8FB9;
-    color: #fff; 
-}
 
-.modal-content {
-    background-color: #1b1a1b;
-    color: #fff;
-}
-.modal-content input {
-    background-color: #1b1a1b; /* Fondo del input */
-    border-color: #5B8FB9; /* Borde del input */
-    color: #fff; /* Color del texto del input */
-}
-/* Estilo para los placeholders de los campos de entrada */
-.form-control::placeholder {
-    color: #ccc; /* Color del marcador de posición */
-}
 
 /* Carrousel */
 

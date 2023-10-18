@@ -5,7 +5,12 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 /* Archivos de proyecto*/
 import './css/style.css'
-import { comprarProducto } from './src/carrito';
+import { comprarProducto,
+        eliminarProducto, 
+        leerLocalStorage, 
+        leerLocalStorageCompra, 
+        procesarPedido, 
+        vaciarCarrito } from './src/carrito';
 
 /* Modo claro/oscuro */
 const modoSwitch = document.getElementById('modoSwitch');
@@ -25,6 +30,7 @@ function aplicarEstilos(modo) {
         body.setAttribute('data-bs-theme', 'light');
     }
 }
+
 
 // Aplicar el modo guardado o predeterminado al cuerpo de la página y al interruptor
 aplicarEstilos(modoPredeterminado);
@@ -102,26 +108,54 @@ form.addEventListener('submit', function(event) {
     }
 });
 
-/* reCAPTCHA */
 
-function onSubmit(token) {
-    // Esta función se llamará cuando se resuelva el desafío Recaptcha.
-    // Aquí puedes enviar el formulario o realizar otras acciones después de la verificación.
-    document.getElementById("demo-form").submit();
-}
 
 /* Carrito */
 
 const productos = document.getElementById('lista-productos')
+//console.log(productos)
+const carrito = document.getElementById('carrito')
+// console.log(carrito)
+
 
 cargarEventos()
 
 function cargarEventos() {
 
-    productos.addEventListener('click', (e) => comprarProducto(e))
+    const ruta = String(location.href)
+    console.log(ruta)
+    
+    if ( !ruta.includes('carrito.html') ) {
+        esIndex()
+    } else {
+        console.log('Estoy en carrito')
+        // Voy a leer el localStorage
+        document.addEventListener('DOMContentLoaded', leerLocalStorageCompra()
+        )
 
+    }
 
 }
 
+function esIndex() {
+    console.log('No estoy en carrito!')
+    const vaciarCarritoBtn = carrito.querySelector('#vaciar-carrito')
+    const procesarPedidoBtn = carrito.querySelector('#procesar-pedido')
+    console.log(vaciarCarritoBtn, procesarPedidoBtn)
 
+    // Se ejecuta cuando presiono sobre el botón comprar
+    productos.addEventListener('click', (e) => comprarProducto(e))
+
+    // Al cargar el documento se muestra lo almacenado en el LS
+    document.addEventListener('DOMContentLoaded', leerLocalStorage())
+
+    //Cuando se elimina un producto del carrito
+    carrito.addEventListener('click', e => eliminarProducto(e))
+
+    //Vaciar carrito
+    vaciarCarritoBtn.addEventListener('click', e => vaciarCarrito(e))
+
+    // Enviar pedido a otra página
+    procesarPedidoBtn.addEventListener('click', e => procesarPedido(e))
+}
 
