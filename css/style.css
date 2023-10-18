@@ -254,7 +254,7 @@ font-weight: bold;
     color: #000; 
 }
 
-/*Pagina Carrito */
+/*?Pagina Carrito */
 
 .fa-cart-shopping {
 color: #5B8FB9;
@@ -264,10 +264,30 @@ color: #5B8FB9;
     width: 30px;
 }
 
-.btn-custom {
-    background-color: white; 
-    border-color: black;
+/* Estilos para modo oscuro */
+body[data-bs-theme="dark"] #trash-button {
+    color: #5B8FB9; /* Color de tu marca en modo oscuro */
+    border: 2px solid #5B8FB9; /* Contorno del botón en modo oscuro */
+    background: transparent; /* Fondo transparente en modo oscuro */
 }
+
+body[data-bs-theme="dark"] #trash-button:hover {
+    color: #FF0000; /* Color rojo en hover en modo oscuro */
+    border-color: #FF0000; /* Contorno rojo en hover en modo oscuro */
+}
+
+/* Estilos para modo claro */
+body[data-bs-theme="light"] #trash-button {
+    color: #5B8FB9; /* Color de tu marca en modo claro */
+    border: 2px solid #5B8FB9; /* Contorno del botón en modo claro */
+    background: transparent; /* Fondo transparente en modo claro */
+}
+
+body[data-bs-theme="light"] #trash-button:hover {
+    color: #FF0000; /* Color rojo en hover en modo claro */
+    border-color: #FF0000; /* Contorno rojo en hover en modo claro */
+}
+
 
 
 /*Iconos y Footer*/
@@ -277,7 +297,6 @@ footer {
     margin: 0;
     padding: 0;
 }
-
 
 .footer-container {
     display: flex;
@@ -397,6 +416,40 @@ body[data-bs-theme="light"] .text-info {
     --color-destacado: #5B8FB9; /* Color de marca */
 }
 
+body[data-bs-theme="dark"] .nosotros h1,
+body[data-bs-theme="dark"] .nosotros h2,
+body[data-bs-theme="dark"] .nosotros h3,
+body[data-bs-theme="dark"] .nosotros h4,
+body[data-bs-theme="dark"] .nosotros h5,
+body[data-bs-theme="dark"] .nosotros h6,
+body[data-bs-theme="dark"] .nosotros p {
+    color: white;
+}
+
+body[data-bs-theme="light"] .nosotros h1,
+body[data-bs-theme="light"] .nosotros h2,
+body[data-bs-theme="light"] .nosotros h3,
+body[data-bs-theme="light"] .nosotros h4,
+body[data-bs-theme="light"] .nosotros h5,
+body[data-bs-theme="light"] .nosotros h6,
+body[data-bs-theme="light"] .nosotros p {
+    color: black;
+}
 
 
+/* ?Pagina contacto */
 
+body[data-bs-theme="dark"] .contacto-formulario input,
+body[data-bs-theme="dark"] .contacto-formulario textarea {
+    color: white;
+    background-color: #222; /* Fondo oscuro para los campos de formulario en modo oscuro */
+    /* Otros estilos necesarios para los campos de formulario en modo oscuro */
+}
+
+/* Estilos para modo claro */
+body[data-bs-theme="light"] .contacto-formulario input,
+body[data-bs-theme="light"] .contacto-formulario textarea {
+    color: black;
+    background-color: #fff; /* Fondo claro para los campos de formulario en modo claro */
+    /* Otros estilos necesarios para los campos de formulario en modo claro */
+}

@@ -167,11 +167,39 @@
           </div>
         </div>
 
-          <div class="d-flex">
-            <a href="/pages/carrito.html" class="text-reset me-3">
-              <i class="fa-solid fa-cart-shopping fa-xl"></i>
-          </a>
-        </div>
+        <!-- Carrito  -->
+        <div class="d-flex"> 
+          <div class="dropdown custom-dropdown">
+              <a href="#" class="text-reset me-3" id="carritoDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa-solid fa-cart-shopping fa-xl"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-end" id="carrito" aria-labelledby="carritoDropdown">
+                    <table class="table" id="lista-carrito">
+                      <thead>
+                          <tr>
+                              <th scope="col">Imagen</th>
+                              <th scope="col">Nombre</th>
+                              <th scope="col">Precio</th>
+                              <th></th>
+                          </tr>
+                      </thead>
+
+                      <tbody>
+                      </tbody>
+
+                  </table>
+                  <div class="d-grid gap-2 d.md-block justify-content-md-center ms-1">
+                    <button  id="vaciar-carrito" class="btn btn-primary">Vaciar Carrito</button>
+                    <button  id="procesar-carrito" class="btn btn-danger">Procesar Compra</button>
+                  </div>
+              </ul>
+          </div>
+      </div>
+      
+
+      
+      
+        
       </nav>
     </header>
 
@@ -198,7 +226,7 @@
       </section>
 
 <div class="container"> 
-  <div class="row my-5"> 
+  <section id="lista-productos" class="row my-5"> 
 
 <!-- !PRODUCTOS -->
       <!--Producto 1--> 
@@ -227,11 +255,11 @@
               <li class="list-group-item border-bottom">Características: Hombre | Basquet </li>
               <li class="list-group-item text-center">
                 <div class="producto1">  
-                <span class="price-highlight precio-en-ars precio-convertido" data-precio-ars="93499">$ 93.499</span>
+                <span class="price-highlight precio">$ 93.499</span>
               </li>
             </ul>
           
-            <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar">Comprar</a>
+            <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar agregar-carrito" data-id="1">Comprar</a>
           
           </div>
           </div>
@@ -262,11 +290,11 @@
                   <li class="list-group-item border-bottom"> Color: Marron </li>
                   <li class="list-group-item border-bottom">Características: Hombre | Moda </li>
                   <li class="list-group-item text-center">
-                    <span class="price-highlight">$ 102.999</span>
+                    <span class="price-highlight precio">$ 102.999</span>
                   </li>
                 </ul>
     
-                <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar">Comprar</a>
+                <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar agregar-carrito" data-id="2">Comprar</a>
               
               </div>
               </div>
@@ -298,11 +326,11 @@
                         <li class="list-group-item border-bottom"> Color: Blanco </li>
                         <li class="list-group-item border-bottom">Características: Mujer | Basquet </li>
                         <li class="list-group-item text-center">
-                          <span class="price-highlight">$ 96.299</span>
+                          <span class="price-highlight precio">$ 96.299</span>
                         </li>
                       </ul>
           
-                      <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar">Comprar</a>
+                      <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar agregar-carrito" data-id="3">Comprar</a>
                     
                     </div>
                     </div>
@@ -310,118 +338,120 @@
       
                     <!--Producto 4-->
                     
-  <div class="col-md-4">   
-  <div class="card m-2 shadow bg-neutral text-neutral">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/pumacalidream1.jpeg" class="d-block w-100" alt="Puma Cali Dream">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/pumacalidream2.jpeg" class="d-block w-100" alt="Puma Cali Dream">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/pumacalidream3.jpeg" class="d-block w-100" alt="Puma Cali Dream">
-        </div>
-      </div>
-      </div>
+                <div class="col-md-4">   
+                <div class="card m-2 shadow bg-neutral text-neutral">
+                  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/img/pumacalidream1.jpeg" class="d-block w-100" alt="Puma Cali Dream">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/pumacalidream2.jpeg" class="d-block w-100" alt="Puma Cali Dream">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/pumacalidream3.jpeg" class="d-block w-100" alt="Puma Cali Dream">
+                      </div>
+                    </div>
+                    </div>
 
 
-      <div class="card-body table-card">
-        <div class="table-column"> </div>
-        <h5 class="card-title text-center">PUMA CALI DREAM </h5>
-        <ul class="list-unstyled mt-3 mb-4 text-left">
-          <li class="list-group-item border-bottom"> Color: Verde</li>
-          <li class="list-group-item border-bottom">Características: Mujer | Moda </li>
-          <li class="list-group-item text-center">
-            <span class="price-highlight">$ 59.999</span>
-          </li>
-        </ul>
+                    <div class="card-body table-card">
+                      <div class="table-column"> </div>
+                      <h5 class="card-title text-center">PUMA CALI DREAM </h5>
+                      <ul class="list-unstyled mt-3 mb-4 text-left">
+                        <li class="list-group-item border-bottom"> Color: Verde</li>
+                        <li class="list-group-item border-bottom">Características: Mujer | Moda </li>
+                        <li class="list-group-item text-center">
+                          <span class="price-highlight precio">$ 59.999</span>
+                        </li>
+                      </ul>
 
-        <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar">Comprar</a>
-      
-      </div>
-      </div>
-      </div>
+                      <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar agregar-carrito" data-id="4">Comprar</a>
+                    
+                    </div>
+                    </div>
+                    </div>
 
-      <!--Producto 5-->
-      <div class="col-md-4">   
-        <div class="card m-2 shadow bg-neutral text-neutral">
-          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="/img/adidasozweego1.jpeg" class="d-block w-100" alt="Adidas Originals Ozweego">
-              </div>
-              <div class="carousel-item">
-                <img src="/img/adidasozweego2.jpeg" class="d-block w-100" alt="Adidas Originals Ozweego">
-              </div>
-              <div class="carousel-item">
-                <img src="/img/adidasozweego3.jpeg" class="d-block w-100" alt="Adidas Originals Ozweego">
-              </div>
-            </div>
-            </div>
-  
-  
-            <div class="card-body table-card">
-              <div class="table-column"> </div>
-              <h5 class="card-title text-center">ADIDAS ORIGINALS OZWEEGO</h5>
-              <ul class="list-unstyled mt-3 mb-4 text-left">
-                <li class="list-group-item border-bottom"> Color: Verde </li>
-                <li class="list-group-item border-bottom">Características: Hombre | Moda </li>
-                <li class="list-group-item text-center">
-                  <span class="price-highlight">$ 88.499</span>
-                </li>
-              </ul>
-  
-              <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar">Comprar</a>
-            
-            </div>
-            </div>
-            </div>
+                    <!--Producto 5-->
+                    <div class="col-md-4">   
+                      <div class="card m-2 shadow bg-neutral text-neutral">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="/img/adidasozweego1.jpeg" class="d-block w-100" alt="Adidas Originals Ozweego">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="/img/adidasozweego2.jpeg" class="d-block w-100" alt="Adidas Originals Ozweego">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="/img/adidasozweego3.jpeg" class="d-block w-100" alt="Adidas Originals Ozweego">
+                            </div>
+                          </div>
+                          </div>
+                
+                
+                          <div class="card-body table-card">
+                            <div class="table-column"> </div>
+                            <h5 class="card-title text-center">ADIDAS ORIGINALS OZWEEGO</h5>
+                            <ul class="list-unstyled mt-3 mb-4 text-left">
+                              <li class="list-group-item border-bottom"> Color: Verde </li>
+                              <li class="list-group-item border-bottom">Características: Hombre | Moda </li>
+                              <li class="list-group-item text-center">
+                                <span class="price-highlight precio">$ 88.499</span>
+                              </li>
+                            </ul>
+                
+                            <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar agregar-carrito" data-id="5">Comprar</a>
+                          
+                      </div>
+                      </div>
+                      </div>
 
-            <!--Producto 6-->
-<div class="col-md-4">   
-  <div class="card m-2 shadow bg-neutral text-neutral">
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/img/jordanreact1.jpeg" class="d-block w-100" alt="Nike Air Force 1 React">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/jordanreact2.jpeg" class="d-block w-100" alt="Nike Air Force 1 React">
-        </div>
-        <div class="carousel-item">
-          <img src="/img/jordanreact3.jpeg" class="d-block w-100" alt="Nike Air Force 1 React">
-        </div>
-      </div>
-      </div>
+                                <!--Producto 6-->
+                    <div class="col-md-4">   
+                      <div class="card m-2 shadow bg-neutral text-neutral">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="/img/jordanreact1.jpeg" class="d-block w-100" alt="Nike Air Force 1 React">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="/img/jordanreact2.jpeg" class="d-block w-100" alt="Nike Air Force 1 React">
+                            </div>
+                            <div class="carousel-item">
+                              <img src="/img/jordanreact3.jpeg" class="d-block w-100" alt="Nike Air Force 1 React">
+                            </div>
+                          </div>
+                          </div>
 
 
-      <div class="card-body table-card">
-        <div class="table-column"> </div>
-        <h5 class="card-title text-center">NIKE AIR FORCE 1 REACT</h5>
-        <ul class="list-unstyled mt-3 mb-4 text-left">
-          <li class="list-group-item border-bottom"> Color: Blanco </li>
-          <li class="list-group-item border-bottom">Características: Hombre | Basquet </li>
-          <li class="list-group-item text-center">
-            <span class="price-highlight">$ 106.499</span>
-          </li>
-        </ul>
+                          <div class="card-body table-card">
+                            <div class="table-column"> </div>
+                            <h5 class="card-title text-center">NIKE AIR FORCE 1 REACT</h5>
+                            <ul class="list-unstyled mt-3 mb-4 text-left">
+                              <li class="list-group-item border-bottom"> Color: Blanco </li>
+                              <li class="list-group-item border-bottom">Características: Hombre | Basquet </li>
+                              <li class="list-group-item text-center">
+                                <span class="price-highlight precio">$ 106.499</span>
+                              </li>
+                            </ul>
 
-        <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar">Comprar</a>
-      
-      </div>
-      </div>
-      </div>
+                            <a href="#" class="btn btn-dark d-block mx-auto btn-resaltar agregar-carrito" data-id="6">Comprar</a>
+                          
+                          </div>
+                          </div>
+                          </div>
 
-            </div>
+  </section>
           
       </main>
 
       <footer class="container-fluid bg-neutral text-white">
         <div class="footer-container">
             <div class="footer-logo">
-                <img src="/img/logo.png" alt="Digitalers Logo">
+                <a href="/index.html" class="footer-logo">
+            <img src="/img/logo.png" alt="Digitalers Logo">
+        </a>
             </div>
             <ul class="nav">
                 <li class="nav-item">

@@ -5,6 +5,7 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 /* Archivos de proyecto*/
 import './css/style.css'
+import { comprarProducto } from './src/carrito';
 
 /* Modo claro/oscuro */
 const modoSwitch = document.getElementById('modoSwitch');
@@ -86,12 +87,41 @@ dropdownItems.forEach(item => {
     });
 });
 
+/* Pagina Contacto */
+
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function(event) {
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;
+
+    if (nombre === '' || email === '' || mensaje === '') {
+        event.preventDefault();
+        alert('Por favor, completa todos los campos.');
+    }
+});
+
+/* reCAPTCHA */
+
+function onSubmit(token) {
+    // Esta función se llamará cuando se resuelva el desafío Recaptcha.
+    // Aquí puedes enviar el formulario o realizar otras acciones después de la verificación.
+    document.getElementById("demo-form").submit();
+}
+
+/* Carrito */
+
+const productos = document.getElementById('lista-productos')
+
+cargarEventos()
+
+function cargarEventos() {
+
+    productos.addEventListener('click', (e) => comprarProducto(e))
 
 
-
-
-
-
+}
 
 
 
