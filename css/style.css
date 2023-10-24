@@ -71,25 +71,23 @@ body[data-bs-theme="light"] {
 /* Barra de búsqueda */
 
 body[data-bs-theme="dark"] .custom-search-button {
-    background-color: #1b1a1b; /* Cambia esto al color de fondo deseado */
-    border: 1px solid #5B8FB9; /* Cambia esto al color del borde deseado */
-    color: #5B8FB9; /* Cambia esto al color del texto deseado */
+    border: 1px solid #5B8FB9; 
+    color: #5B8FB9; 
 }
 
 
 body[data-bs-theme="dark"] .custom-search-form {
-    background-color: #1b1a1b; /* Cambia esto al color de fondo deseado */
-    padding: 10px; /* Ajusta el relleno según sea necesario */
-    border-radius: 5px; /* Ajusta el radio del borde según sea necesario */
+
+    padding: 10px; 
+    border-radius: 5px; 
 }
 
 
 body[data-bs-theme="dark"] .custom-search-form input {
-    background-color: #1b1a1b; /* Cambia esto al color de fondo del campo de entrada */
-    color: #f7f4f4; /* Cambia esto al color del texto del campo de entrada */
-    border: 1px solid #5B8FB9; /* Cambia esto al color del borde del campo de entrada */
-    border-radius: 5px; /* Ajusta el radio del borde según sea necesario */
-    padding: 5px; /* Ajusta el relleno del campo de entrada según sea necesario */
+    color: #f7f4f4; 
+    border: 1px solid #5B8FB9; 
+    border-radius: 5px; 
+    padding: 5px; 
 }
 
 
