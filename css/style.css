@@ -12,10 +12,10 @@ font-family: 'Lato', sans-serif;
 }
 
 body[data-bs-theme="light"] {
-    /* Agrega tus estilos para el modo claro aquí */
+
     background-color: rgb(247, 247, 247);
     color: black;
-    /* ... otras reglas de estilo ... */
+    
 }
 
 /*NAVBAR*/
@@ -70,19 +70,21 @@ body[data-bs-theme="light"] {
 
 /* Barra de búsqueda */
 
-.custom-search-button {
+body[data-bs-theme="dark"] .custom-search-button {
     background-color: #1b1a1b; /* Cambia esto al color de fondo deseado */
     border: 1px solid #5B8FB9; /* Cambia esto al color del borde deseado */
     color: #5B8FB9; /* Cambia esto al color del texto deseado */
 }
 
-.custom-search-form {
+
+body[data-bs-theme="dark"] .custom-search-form {
     background-color: #1b1a1b; /* Cambia esto al color de fondo deseado */
     padding: 10px; /* Ajusta el relleno según sea necesario */
     border-radius: 5px; /* Ajusta el radio del borde según sea necesario */
 }
 
-.custom-search-form input {
+
+body[data-bs-theme="dark"] .custom-search-form input {
     background-color: #1b1a1b; /* Cambia esto al color de fondo del campo de entrada */
     color: #f7f4f4; /* Cambia esto al color del texto del campo de entrada */
     border: 1px solid #5B8FB9; /* Cambia esto al color del borde del campo de entrada */
@@ -90,7 +92,8 @@ body[data-bs-theme="light"] {
     padding: 5px; /* Ajusta el relleno del campo de entrada según sea necesario */
 }
 
-input:focus {
+
+body[data-bs-theme="dark"]  input:focus {
     color: #f7f4f4; /* Cambia el color del texto cuando el input está enfocado */
     background-color: #1b1a1b; /* Cambia el color de fondo cuando el input está enfocado */
 }
@@ -243,14 +246,7 @@ body[data-bs-theme="dark"] .bg-neutral {
     color: #ecf0f1; 
 }
 
-.btn-resaltar {
-    font-weight: bold; 
-    background-color: #638b94; 
-    border-color: #638b94; 
-    color: #000; 
-    font-family: Lato, sans-serif;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
-}
+
 
 .card-title {
 font-family: 'Lato', sans-serif;
@@ -259,16 +255,31 @@ font-weight: bold;
 
 /* Botón COMPRAR*/
 
-.btn-resaltar {
+body[data-bs-theme="dark"] .btn-resaltar {
     background-color: #638b94 ; 
     border-color: #638b94; 
     color: #000; 
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', bold, sans-serif;
     letter-spacing: 1px;
     transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
 }
 
-  .btn-resaltar:hover { /*Reacción al pasar el mouse */
+body[data-bs-theme="dark"] .btn-resaltar:hover { /*Reacción al pasar el mouse */
+    background-color: #7dc2c3; 
+    border-color: #7dc2c3; 
+    color: #000; 
+}
+
+body[data-bs-theme="light"] .btn-resaltar {
+    background-color: #638b94 ; 
+    border-color: #638b94; 
+    color: #000; 
+    font-family: 'Inter', bold, sans-serif;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; 
+}
+
+body[data-bs-theme="light"] .btn-resaltar:hover { /*Reacción al pasar el mouse */
     background-color: #7dc2c3; 
     border-color: #7dc2c3; 
     color: #000; 
