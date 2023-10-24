@@ -5,10 +5,13 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 /* Archivos de proyecto*/
 import './css/style.css'
-import { comprarProducto,
+import { calcularTotal, 
+        comprarProducto,
         eliminarProducto, 
+        eliminarProductoCompra, 
         leerLocalStorage, 
         leerLocalStorageCompra, 
+        obtenerEvento, 
         procesarPedido, 
         vaciarCarrito } from './src/carrito';
 
@@ -77,22 +80,6 @@ document.getElementById("registroForm").addEventListener("submit", function(even
 });
 
 
-/* Monedas */
-const tasasDeCambio = {
-    eur: 0.013, // Tasa de cambio para Euros
-    usd: 0.015, // Tasa de cambio para Dólares
-    brl: 0.080 // Tasa de cambio para Reales Brasileños
-};
-
-const dropdownItems = document.querySelectorAll('.dropdown-item');
-
-dropdownItems.forEach(item => {
-    item.addEventListener('click', () => {
-        const codigoMoneda = item.getAttribute('data-codigo-moneda');
-        // Resto del código para obtener tasas de cambio y realizar conversiones
-    });
-});
-
 /* Pagina Contacto */
 
 const form = document.querySelector('form');
@@ -116,7 +103,7 @@ const productos = document.getElementById('lista-productos')
 //console.log(productos)
 const carrito = document.getElementById('carrito')
 // console.log(carrito)
-
+const carritoCompra = document.getElementById('lista-compra')
 
 cargarEventos()
 
@@ -128,11 +115,7 @@ function cargarEventos() {
     if ( !ruta.includes('carrito.html') ) {
         esIndex()
     } else {
-        console.log('Estoy en carrito')
-        // Voy a leer el localStorage
-        document.addEventListener('DOMContentLoaded', leerLocalStorageCompra()
-        )
-
+        esCarrito()
     }
 
 }
@@ -156,6 +139,22 @@ function esIndex() {
     vaciarCarritoBtn.addEventListener('click', e => vaciarCarrito(e))
 
     // Enviar pedido a otra página
-    procesarPedidoBtn.addEventListener('click', e => procesarPedido(e))
+    procesarPedidoBtn.addEventListener('click', function(e) {
+        procesarPedido(e);
+        // Quita la clase "danger" del botón después de procesar el pedido
+        procesarPedidoBtn.classList.remove('danger');
+    });
 }
 
+function esCarrito() {
+    console.log('Estoy en carrito')
+    // Voy a leer el localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+        leerLocalStorageCompra();
+        calcularTotal(); 
+    });
+
+    carritoCompra.addEventListener('click', e => eliminarProductoCompra(e));
+    carritoCompra.addEventListener('change', e => obtenerEvento(e));
+    carritoCompra.addEventListener('keyup', e => obtenerEvento(e));
+}

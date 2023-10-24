@@ -129,7 +129,7 @@
     
                   <div class="mb-3">
                     <label for="email" class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="email" placeholder="Ejemplo digitalers@educacionit.com" required>
+                    <input type="email" class="form-control" id="email" placeholder="Ejemplo digitalers@educacionit.com" required autocomplete="email">
                   </div>
     
                   <div class="mb-3">
@@ -188,18 +188,24 @@
                       </tbody>
 
                   </table>
-                  <div class="d-grid gap-2 d.md-block justify-content-md-center ms-1">
-                    <button  id="vaciar-carrito" class="btn btn-primary">Vaciar Carrito</button>
-                    <button  id="procesar-pedido" class="btn btn-danger">Procesar Compra</button>
+                  <div class="mb-3 mx-3">
+                    
                   </div>
-              </ul>
-          </div>
-      </div>
+                  
+                  <div class="d-grid gap-2 mb-3 mx-3">
+                    <button id="vaciar-carrito" class="btn btn-custom">Vaciar Carrito</button>
+                  </div>
+                  
+                  <div class="d-grid gap-2 mx-3">
+                    <button id="procesar-pedido" class="btn btn-success">Proceder a la Compra</button>
+                  </div>
+                  
+                  
+                  
+                
       
 
-      
-      
-        
+
       </nav>
     </header>
 
@@ -251,11 +257,10 @@
             <div class="table-column"> </div>
             <h5 class="card-title text-center">JORDAN AIR 1 MID</h5>
             <ul class="list-unstyled mt-3 mb-4 text-left">
-              <li class="list-group-item border-bottom"> Color: Negro </li>
-              <li class="list-group-item border-bottom">Características: Hombre | Basquet </li>
+              <li class="list-group-item border-bottom color"> Color: Negro </li>
+              <li class="list-group-item border-bottom caracteristicas">Características: Hombre | Basquet </li>
               <li class="list-group-item text-center">
-                <div class="producto1">  
-                <span class="price-highlight precio">$ 93.499</span>
+                <span class="price-highlight precio" data-precio="93499">93499</span>
               </li>
             </ul>
           
@@ -287,10 +292,10 @@
                 <div class="table-column"> </div>
                 <h5 class="card-title text-center">JORDAN AIR 1 ZOOM CMFT 2</h5>
                 <ul class="list-unstyled mt-3 mb-4 text-left">
-                  <li class="list-group-item border-bottom"> Color: Marron </li>
-                  <li class="list-group-item border-bottom">Características: Hombre | Moda </li>
+                  <li class="list-group-item border-bottom color"> Color: Marron </li>
+                  <li class="list-group-item border-bottom caracteristicas">Características: Hombre | Moda </li>
                   <li class="list-group-item text-center">
-                    <span class="price-highlight precio">$ 102.999</span>
+                    <span class="price-highlight precio">102999</span>
                   </li>
                 </ul>
     
@@ -323,10 +328,10 @@
                       <div class="table-column"> </div>
                       <h5 class="card-title text-center">ADIDAS FORUM BONEGA 2B</h5>
                       <ul class="list-unstyled mt-3 mb-4 text-left">
-                        <li class="list-group-item border-bottom"> Color: Blanco </li>
-                        <li class="list-group-item border-bottom">Características: Mujer | Basquet </li>
+                        <li class="list-group-item border-bottom color"> Color: Blanco </li>
+                        <li class="list-group-item border-bottom caracteristicas">Características: Mujer | Basquet </li>
                         <li class="list-group-item text-center">
-                          <span class="price-highlight precio">$ 96.299</span>
+                          <span class="price-highlight precio">96299</span>
                         </li>
                       </ul>
           
@@ -359,10 +364,10 @@
                       <div class="table-column"> </div>
                       <h5 class="card-title text-center">PUMA CALI DREAM </h5>
                       <ul class="list-unstyled mt-3 mb-4 text-left">
-                        <li class="list-group-item border-bottom"> Color: Verde</li>
-                        <li class="list-group-item border-bottom">Características: Mujer | Moda </li>
+                        <li class="list-group-item border-bottom color"> Color: Verde</li>
+                        <li class="list-group-item border-bottom caracteristicas">Características: Mujer | Moda </li>
                         <li class="list-group-item text-center">
-                          <span class="price-highlight precio">$ 59.999</span>
+                          <span class="price-highlight precio">59999</span>
                         </li>
                       </ul>
 
@@ -394,10 +399,10 @@
                             <div class="table-column"> </div>
                             <h5 class="card-title text-center">ADIDAS ORIGINALS OZWEEGO</h5>
                             <ul class="list-unstyled mt-3 mb-4 text-left">
-                              <li class="list-group-item border-bottom"> Color: Verde </li>
-                              <li class="list-group-item border-bottom">Características: Hombre | Moda </li>
+                              <li class="list-group-item border-bottom color"> Color: Verde </li>
+                              <li class="list-group-item border-bottom caracteristicas">Características: Hombre | Moda </li>
                               <li class="list-group-item text-center">
-                                <span class="price-highlight precio">$ 88.499</span>
+                                <span class="price-highlight precio">88499</span>
                               </li>
                             </ul>
                 
@@ -429,10 +434,10 @@
                             <div class="table-column"> </div>
                             <h5 class="card-title text-center">NIKE AIR FORCE 1 REACT</h5>
                             <ul class="list-unstyled mt-3 mb-4 text-left">
-                              <li class="list-group-item border-bottom"> Color: Blanco </li>
-                              <li class="list-group-item border-bottom">Características: Hombre | Basquet </li>
+                              <li class="list-group-item border-bottom color"> Color: Blanco </li>
+                              <li class="list-group-item border-bottom caracteristicas">Características: Hombre | Basquet </li>
                               <li class="list-group-item text-center">
-                                <span class="price-highlight precio">$ 106.499</span>
+                                <span class="price-highlight precio">106499</span>
                               </li>
                             </ul>
 

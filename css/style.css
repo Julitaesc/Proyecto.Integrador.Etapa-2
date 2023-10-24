@@ -276,6 +276,50 @@ font-weight: bold;
 
 /*?Pagina Carrito */
 
+.pagar {
+    background-color: #5B8FB9;
+    color: white;
+    border-color: #5B8FB9;
+}
+    
+.pagar:hover {
+    background-color: #427291;
+    border-color: #427291;
+}
+
+#vaciar-carrito {
+    background-color: #5B8FB9;
+    color: #ffffff;
+    /* Agrega más estilos según tus preferencias */
+}
+
+#procesar-pedido {
+    background-color: #5B8FB9;
+    color: #ffffff;
+    /* Agrega más estilos según tus preferencias */
+}
+
+/* Estilos personalizados para los botones */
+#vaciar-carrito:hover {
+    background-color: #ff0000; /* Cambia esto al color que desees */
+    color: #ffffff; /* Cambia esto al color del texto que desees */
+    /* Agrega más estilos según tus preferencias */
+}
+
+#procesar-pedido:hover {
+    background-color: green; /* Cambia el color de fondo al pasar el mouse sobre el botón */
+}
+
+#procesar-pedido.danger {
+    background-color: #5B8FB9; /* Puedes sobrescribir el color de fondo de la clase 'danger' si es necesario */
+    color: white; /* Puedes sobrescribir el color del texto de la clase 'danger' si es necesario */
+}
+
+#procesar-pedido.danger:hover {
+    background-color: #4A7593; /* Cambia el color de fondo al pasar el mouse sobre el botón si tiene la clase 'danger' */
+}
+
+
 .fa-cart-shopping {
 color: #5B8FB9;
 }
@@ -285,25 +329,26 @@ color: #5B8FB9;
 }
 
 /* Estilos para modo oscuro */
-body[data-bs-theme="dark"] #trash-button {
+body[data-bs-theme="dark"] .borrar-producto-compra .fa-trash-can  {
     color: #5B8FB9; /* Color de tu marca en modo oscuro */
     border: 2px solid #5B8FB9; /* Contorno del botón en modo oscuro */
-    background: transparent; /* Fondo transparente en modo oscuro */
+    background: transparent;
+
 }
 
-body[data-bs-theme="dark"] #trash-button:hover {
+body[data-bs-theme="dark"] .fa-trash-can:hover {
     color: #FF0000; /* Color rojo en hover en modo oscuro */
     border-color: #FF0000; /* Contorno rojo en hover en modo oscuro */
 }
 
 /* Estilos para modo claro */
-body[data-bs-theme="light"] #trash-button {
+body[data-bs-theme="light"] .borrar-producto-compra .fa-trash-can {
     color: #5B8FB9; /* Color de tu marca en modo claro */
     border: 2px solid #5B8FB9; /* Contorno del botón en modo claro */
     background: transparent; /* Fondo transparente en modo claro */
 }
 
-body[data-bs-theme="light"] #trash-button:hover {
+body[data-bs-theme="light"] .fa-trash-can:hover {
     color: #FF0000; /* Color rojo en hover en modo claro */
     border-color: #FF0000; /* Contorno rojo en hover en modo claro */
 }
