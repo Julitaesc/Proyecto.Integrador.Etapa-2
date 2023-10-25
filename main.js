@@ -13,7 +13,7 @@ import { calcularTotal,
         leerLocalStorageCompra, 
         obtenerEvento, 
         procesarPedido, 
-        vaciarCarrito } from './src/carrito';
+        vaciarCarrito } from './carrito';
 
 /* Modo claro/oscuro */
 const modoSwitch = document.getElementById('modoSwitch');
