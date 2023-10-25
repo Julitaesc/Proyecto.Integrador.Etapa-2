@@ -77,7 +77,6 @@ body[data-bs-theme="dark"] .custom-search-button {
 
 
 body[data-bs-theme="dark"] .custom-search-form {
-
     padding: 10px; 
     border-radius: 5px; 
 }
@@ -285,13 +284,26 @@ body[data-bs-theme="light"] .btn-resaltar:hover { /*Reacción al pasar el mouse 
 
 /*?Pagina Carrito */
 
-.pagar {
+body[data-bs-theme="dark"] .pagar {
     background-color: #5B8FB9;
-    color: white;
+    color: black;
+    font-family: Inter, bold, sans-serif;
     border-color: #5B8FB9;
 }
     
-.pagar:hover {
+body[data-bs-theme="dark"] .pagar:hover {
+    background-color: #427291;
+    border-color: #427291;
+}
+
+body[data-bs-theme="light"] .pagar {
+    background-color: #5B8FB9;
+    color: black;
+    font-family: Inter, bold, sans-serif;
+    border-color: #5B8FB9;
+}
+    
+body[data-bs-theme="light"] .pagar:hover {
     background-color: #427291;
     border-color: #427291;
 }
@@ -317,15 +329,6 @@ body[data-bs-theme="light"] .btn-resaltar:hover { /*Reacción al pasar el mouse 
 
 #procesar-pedido:hover {
     background-color: green; /* Cambia el color de fondo al pasar el mouse sobre el botón */
-}
-
-#procesar-pedido.danger {
-    background-color: #5B8FB9; /* Puedes sobrescribir el color de fondo de la clase 'danger' si es necesario */
-    color: white; /* Puedes sobrescribir el color del texto de la clase 'danger' si es necesario */
-}
-
-#procesar-pedido.danger:hover {
-    background-color: #4A7593; /* Cambia el color de fondo al pasar el mouse sobre el botón si tiene la clase 'danger' */
 }
 
 
